@@ -152,5 +152,5 @@ Since all code is in Jupyter Notebook cells (`.ipynb`), the following outlines k
 ## Contributors
 
 - **Abinaya V**
-- **Shivani**
+- **Shivani E**
 - **Kanishka K**
