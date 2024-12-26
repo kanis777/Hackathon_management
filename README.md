@@ -103,13 +103,11 @@ This repository contains a comprehensive framework for managing hackathons, offe
 
 ## Code Overview
 
-Since all code is in Jupyter Notebook cells (`.ipynb`), the following outlines key functionalities for each module:
+Since all code is in Jupyter Notebook cells (`.ipynb`), the following outlines key functionalities for each cell:
 
-### 1. `summarization_pipeline.ipynb`
 - Summarizes text content using the `facebook/bart-large-cnn` model.
 - Handles long text by truncating input to fit the model's maximum token size.
 
-### 2. `analyze_code.ipynb`
 - Provides detailed analysis of code files.  
 - Key aspects analyzed:
   - **Purpose**: Overall objective of the code.
@@ -117,16 +115,13 @@ Since all code is in Jupyter Notebook cells (`.ipynb`), the following outlines k
   - **Dependencies**: External libraries or modules used.
   - **Tools and Technologies**: Identifies tools utilized in the project.
 
-### 3. `score_submission.ipynb`
 - Scores a project's analysis based on:
   - **Key Project Features**: Relevance and completeness.
   - **Problem-Statement Adherence**: Effectiveness in addressing the stated problem.
   - **Innovation**: Uniqueness of the approach.
   - **Feasibility**: Practicality and implementability.
   - **Impact**: Potential significance or usefulness.
-- Provides justifications for each score.
 
-### 4. `process_repository_and_score.ipynb`
 - Combines the functionalities of analysis and scoring.
 - Processes all files in a repository and generates a combined analysis.
 - Outputs structured scores and insights for the entire project.
@@ -157,5 +152,5 @@ Since all code is in Jupyter Notebook cells (`.ipynb`), the following outlines k
 ## Contributors
 
 - **Abinaya V**
-- **Shivani **
+- **Shivani**
 - **Kanishka K**
