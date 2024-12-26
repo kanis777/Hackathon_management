@@ -1,0 +1,13 @@
+sqlite3
+datetime
+re
+tabulate
+requests
+argparse
+base64
+json
+transformers==4.31.0  # Specify the version if needed
+torch>=1.10.0  # Required for Hugging Face Transformers
+numpy>=1.21.0  # Transformers dependency
+tokenizers==0.13.3  # Hugging Face Transformers dependency
+huggingface-hub>=0.14.0  # Hugging Face hub for model access
