@@ -66,7 +66,7 @@ This repository contains a comprehensive framework for managing hackathons, offe
 - **[Feedback Generation Model: EleutherAI/gpt-neo-1.3B](https://huggingface.co/EleutherAI/gpt-neo-1.3B)**  
   GPT-Neo (OpenAI GPT-style model) for generating constructive feedback based on provided summaries.
 
-- **[Text Analysis Model: google/flan-t5-base](https://huggingface.co/google/flan-t5-base)**  
+- **[Scoring Assistance: google/flan-t5-base](https://huggingface.co/google/flan-t5-base)**  
   FLAN-T5 (from Google) for code analysis or NLP tasks, a fine-tuned version of T5.
 
 ---
