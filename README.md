@@ -2,24 +2,24 @@
 
 This repository contains a comprehensive framework for managing hackathons, offering end-to-end event handling. The project leverages natural language processing (NLP) techniques for summarizing, analyzing, and scoring submissions, along with various tools and utilities to support code evaluation and insights.
 
+---
+
 ## Problem Statement
 
-Build a Hackathon Management platform for end-to-end event handling
-Deliverables:
-1. Allow participants to register with details
-2. Provide a list of hackathon themes or categories.
-3. Teams can upload their projects (e.g., code repositories(github links),
-documents, and presentations), Store submissions securely with timestamp.
-4.Build AI/ML techniques to help judges with insights from the submissions like:
-a. Feedback Suggestions:Auto-generate constructive feedback for
-submissions to save judges time.
-b. Scoring Assistance: LLMs can pre-score submissions by:
-i. Summarizing key project features.
-ii. Analyzing problem-statement adherence.
-iii. Suggesting scores for innovation, feasibility, and impact based on
-predefined prompts.
+**Build a Hackathon Management Platform for End-to-End Event Handling**
 
-### Libraries/Algorithms Used
+### Deliverables:
+1. Allow participants to register with details.
+2. Provide a list of hackathon themes or categories.
+3. Teams can upload their projects (e.g., code repositories (GitHub links), documents, and presentations). Store submissions securely with timestamps.
+4. Build AI/ML techniques to help judges with insights from the submissions, such as:
+   - **Feedback Suggestions**: Auto-generate constructive feedback for submissions to save judges time.
+   - **Scoring Assistance**: LLMs can pre-score submissions by:
+     - Summarizing key project features.
+     - Analyzing problem-statement adherence.
+     - Suggesting scores for innovation, feasibility, and impact based on predefined prompts.
+
+---
 
 ## Libraries/Algorithms Used
 
@@ -69,88 +69,93 @@ predefined prompts.
 - **[Text Analysis Model: google/flan-t5-base](https://huggingface.co/google/flan-t5-base)**  
   FLAN-T5 (from Google) for code analysis or NLP tasks, a fine-tuned version of T5.
 
+---
+
 ## Key Features
 
-Hackathon Management:
+### Hackathon Management:
+- Automates the process of evaluating submissions.
+- Generates structured analyses of project repositories.
+- Assigns scores based on predefined criteria, including innovation, feasibility, and impact.
 
-Automates the process of evaluating submissions.
+### Code Analysis:
+- Analyzes code files to extract purpose, key functions, and dependencies.
+- Utilizes Hugging Face models like `google/flan-t5-base` and `facebook/bart-large-cnn` for summarization and scoring.
 
-Generates structured analyses of project repositories.
+### Submission Scoring:
+- Evaluates combined analyses of all files in a repository.
+- Assigns scores on a scale of 1 to 10 for aspects like key project features, adherence to problem statements, and innovation.
 
-Assigns scores based on predefined criteria, including innovation, feasibility, and impact.
+### File and Directory Processing:
+- Recursively processes all files in a specified directory.
+- Handles multiple file formats, including `.py`, `.js`, `.ts`, and `.json`.
 
-Code Analysis:
+---
 
-Analyzes code files to extract purpose, key functions, and dependencies.
+## Technologies Used
+- **Python**: Core programming language for the framework.
+- **Hugging Face Transformers**: Pre-trained models for text summarization and generation.
+- **Google Flan-T5 Base**: Lightweight model for text-to-text generation tasks.
+- **Facebook BART Large-CNN**: High-performance summarization model.
+- **OS Module**: For directory traversal and file handling.
 
-Utilizes Hugging Face models like google/flan-t5-base and facebook/bart-large-cnn for summarization and scoring.
+---
 
-Submission Scoring:
+## Code Overview
 
-Evaluates combined analyses of all files in a repository.
+Since all code is in Jupyter Notebook cells (`.ipynb`), the following outlines key functionalities for each module:
 
-Assigns scores on a scale of 1 to 10 for aspects like key project features, adherence to problem statements, and innovation.
+### 1. `summarization_pipeline.ipynb`
+- Summarizes text content using the `facebook/bart-large-cnn` model.
+- Handles long text by truncating input to fit the model's maximum token size.
 
-File and Directory Processing:
+### 2. `analyze_code.ipynb`
+- Provides detailed analysis of code files.  
+- Key aspects analyzed:
+  - **Purpose**: Overall objective of the code.
+  - **Key Functions**: Main methods and their roles.
+  - **Dependencies**: External libraries or modules used.
+  - **Tools and Technologies**: Identifies tools utilized in the project.
 
-Recursively processes all files in a specified directory.
+### 3. `score_submission.ipynb`
+- Scores a project's analysis based on:
+  - **Key Project Features**: Relevance and completeness.
+  - **Problem-Statement Adherence**: Effectiveness in addressing the stated problem.
+  - **Innovation**: Uniqueness of the approach.
+  - **Feasibility**: Practicality and implementability.
+  - **Impact**: Potential significance or usefulness.
+- Provides justifications for each score.
 
-Handles multiple file formats, including .py, .js, .ts, and .json.
+### 4. `process_repository_and_score.ipynb`
+- Combines the functionalities of analysis and scoring.
+- Processes all files in a repository and generates a combined analysis.
+- Outputs structured scores and insights for the entire project.
 
-Technologies Used
+---
 
-Python: Core programming language for the framework.
+## Installation
 
-Hugging Face Transformers: Pre-trained models for text summarization and generation.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/hackathon-management-platform.git
+   
+2. Navigate to the project directory:
+   ```bash
+   cd hackathon-management-platform
 
-Google Flan-T5 Base: Lightweight model for text-to-text generation tasks.
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
 
-Facebook BART Large-CNN: High-performance summarization model.
+## Usage
 
-OS Module: For directory traversal and file handling.
+1. Open the `.ipynb` files in **Jupyter Notebook** or **Jupyter Lab**.
+2. Execute the cells in sequence to perform summarization, analysis, and scoring tasks.
 
-Code Overview
+---
 
-summarization_pipeline.py
+## Contributors
 
-Summarizes text content using the facebook/bart-large-cnn model.
-
-Handles long text by truncating input to fit the model's maximum token size.
-
-analyze_code.py
-
-Provides detailed analysis of code files.
-
-Key aspects analyzed:
-
-Purpose: Overall objective of the code.
-
-Key Functions: Main methods and their roles.
-
-Dependencies: External libraries or modules used.
-
-Tools and Technologies: Identifies tools utilized in the project.
-
-score_submission.py
-
-Scores a project's analysis based on:
-
-Key Project Features: Relevance and completeness.
-
-Problem-Statement Adherence: Effectiveness in addressing the stated problem.
-
-Innovation: Uniqueness of the approach.
-
-Feasibility: Practicality and implementability.
-
-Impact: Potential significance or usefulness.
-
-Provides justifications for each score.
-
-process_repository_and_score.py
-
-Combines the functionalities of analysis and scoring.
-
-Processes all files in a repository and generates a combined analysis.
-
-Outputs structured scores and insights for the entire project.
+- **Abinaya V**
+- **Shivani **
+- **Kanishka K**
